@@ -1,0 +1,32 @@
+public class Linear_search_wealth {
+    public static void main(String[] main) {
+        int[][] accounts = {
+                {1, 5},
+                {7, 3},
+                {3, 5},
+
+        };
+
+
+        int stored_max = 0;
+        int temp;
+        for (int i = 0; i < accounts.length; i++) {
+            temp = calculate_max(accounts[i]);
+            if (temp > stored_max) {
+                stored_max = temp;
+            }
+
+        }
+        System.out.println("your value is:" + stored_max);
+
+
+    }
+
+    static int calculate_max(int[] arr) {
+        int sum = 0;
+        for (int j : arr) {
+            sum += j;
+        }
+        return sum;
+    }
+}
