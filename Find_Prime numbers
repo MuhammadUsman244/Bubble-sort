@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class function_methods {
+    public static void main(String[] args){
+        Scanner input=new Scanner(System.in);
+        int num;
+        System.out.print("Enter the number:");
+        num=input.nextInt();
+        if(check_prime_number(num)){
+            System.out.println("Your number is prime");
+        }
+        else{
+            System.out.println("Your number is not prime");
+        }
+    }
+    static boolean check_prime_number(int num){
+        boolean found=true;
+        for(int i=2;i<=num/2;i++){
+            if(num%i==0){
+                found=false;
+                break;
+            }
+        }
+        if(found){
+            return true;
+        }
+        return false;
+    }
+}
